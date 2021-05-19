@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 import './App.css';
 
 import tasks from './sample/tasks.json'
@@ -8,6 +8,7 @@ import tasks from './sample/tasks.json'
 import Tasks from './components/Tasks'
 import TaskForm  from './components/TaskForm'
 import Posts from './components/Posts'
+import ReactTemplate from './components/ReactTemplate';
 
 //React.Component
 class App extends Component {
@@ -43,20 +44,23 @@ class App extends Component {
   render(){
     return <div>
     <Router>
-      <Link to="/">Home</Link>
-      <br/>
+      <Link to="/home">Home</Link>    <br/>
       <Link to="/posts">Posts</Link>
-      <Route exact path="/" render={()=>{
-        return <div>
-          <TaskForm addTask={this.addTask}/>
-          <Tasks
-            tasks={this.state.tasks}
-            deleteTask={this.deleteTask}
-            checkDone={this.checkDone}/>
-        </div>
-        }} >
+      
+      <Route exact path="/" component={ReactTemplate} />
+      <Route path="/home" render={()=>{
+        return(
+          <div>
+            <TaskForm addTask={this.addTask}/>
+            <Tasks
+              tasks={this.state.tasks}
+              deleteTask={this.deleteTask}
+              checkDone={this.checkDone}/>
+          </div>)
+      }}>
       </Route>
       <Route path="/posts" component={Posts} />
+      <Redirect to="/"/>
     </Router>
     </div>
   }
