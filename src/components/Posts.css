@@ -1,0 +1,17 @@
+.Post{
+
+    height: '100%';
+    background: rgb(34,193,195);
+    background: linear-gradient(180deg,
+    rgba(34,193,195,1) 0%,
+    rgba(253,187,45,1) 100%);
+    /*
+    background: rgb(0,212,255);
+    background: linear-gradient(180deg,
+    rgba(0,212,255,1) 0%,
+    rgba(13,183,218,1) 16%,
+    rgba(8,196,235,1) 31%,
+    rgba(37,166,193,1) 51%,
+    rgba(39,144,166,1) 73%,
+    rgba(74,132,134,1) 100%);*/
+}

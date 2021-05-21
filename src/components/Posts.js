@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Posts.css'
 
 export default class Posts extends Component {
 
@@ -14,9 +15,11 @@ export default class Posts extends Component {
 
     render() {
         return (
-            <div>
+            <div className="Post">
                 <h1>Posts</h1>
                 {
+                    
+
                     this.state.posts.map(post => {
                         return <div key={ post.id } >
                             <h1>{post.title}</h1>
