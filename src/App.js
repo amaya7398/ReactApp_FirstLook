@@ -46,7 +46,7 @@ class App extends Component {
     return <div>
     <Router>
       <Link to="/home">Home</Link>    <br/>
-      <Link to="/posts">Posts</Link>
+      <Link to="/posts">Posts</Link>  <br/>
       
       <Route exact path="/" component={ReactTemplate} />
       <Route path="/home" render={()=>{
@@ -61,8 +61,7 @@ class App extends Component {
       }}>
       </Route>
       <Route path="/posts" component={Posts} />
-      <Route path="/cards" component={Cards}/>
-      <Redirect to="/cards"/>
+      <Redirect to="/"/>
     </Router>
     </div>
   }
