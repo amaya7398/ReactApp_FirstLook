@@ -10,10 +10,8 @@ export default class Posts extends Component {
         const res = await fetch('https://jsonplaceholder.typicode.com/posts')
         const data = await res.json();
         this.setState({posts: data})
-
     }
-    
-    
+
     render() {
         return (
             <div>
