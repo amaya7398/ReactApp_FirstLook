@@ -9,6 +9,7 @@ import Tasks from './components/Tasks'
 import TaskForm  from './components/TaskForm'
 import Posts from './components/Posts'
 import ReactTemplate from './components/ReactTemplate';
+import Cards from './components/Cards';
 
 //React.Component
 class App extends Component {
@@ -60,7 +61,8 @@ class App extends Component {
       }}>
       </Route>
       <Route path="/posts" component={Posts} />
-      <Redirect to="/"/>
+      <Route path="/cards" component={Cards}/>
+      <Redirect to="/cards"/>
     </Router>
     </div>
   }
