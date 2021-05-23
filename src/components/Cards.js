@@ -8,7 +8,7 @@ export default class Cards extends Component {
                 <div className="row">
                     {
                         this.props.posts.map ( card => (
-                            <div className="col-md-4" key={card.id}>
+                            <div className="d-flex align-self-stretch col-md-4 " key={card.id}>
                                 <Card title={card.title} body={card.body} />
                             </div>
                         ))

@@ -9,7 +9,7 @@ import Tasks from './components/Tasks'
 import TaskForm  from './components/TaskForm'
 import Posts from './components/Posts'
 import ReactTemplate from './components/ReactTemplate';
-import Cards from './components/Cards';
+import NavBar from './components/NavBar';
 
 //React.Component
 class App extends Component {
@@ -45,10 +45,9 @@ class App extends Component {
   render(){
     return <div>
     <Router>
-      <Link to="/home">Home</Link>    <br/>
-      <Link to="/posts">Posts</Link>  <br/>
-      
+      <NavBar/>
       <Route exact path="/" component={ReactTemplate} />
+      <Route path="/posts" component={Posts} />
       <Route path="/home" render={()=>{
         return(
           <div>
@@ -60,7 +59,6 @@ class App extends Component {
           </div>)
       }}>
       </Route>
-      <Route path="/posts" component={Posts} />
       <Redirect to="/"/>
     </Router>
     </div>
