@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import InforCard from './Info-Card'
 
 
 export default class Card extends Component {
@@ -6,11 +7,7 @@ export default class Card extends Component {
         return (
             <div className="card text-center bg-dark mb-1 border border-info">
                 <div className="card-body text-info">
-                    <h4 className="card-title">{this.props.title}</h4>
-                    <p className="card-text text-secondary">{this.props.body}</p>
-                    <a href="#!" className="btn btn-outline-secondary">
-                        More information
-                    </a>
+                    <InforCard info={this.props.info} />
                 </div>
             </div>
         )

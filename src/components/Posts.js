@@ -18,7 +18,7 @@ export default class Posts extends Component {
         return (
             <div className="Post">
                 <h1>Posts</h1>
-                <Cards posts={this.state.posts} />
+                <Cards info={this.state.posts} />
             </div>
         )
     }
